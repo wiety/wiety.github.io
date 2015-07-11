@@ -1,0 +1,15 @@
+Package: com.vsz.vobec
+Version: 0.0.1-22
+Architecture: iphoneos-arm
+Maintainer: T.Herak
+Depends: mobilesubstrate
+Filename: ./debs//com.vsz.vobec_0.0.1-22_iphoneos-arm.deb
+Size: 189476
+MD5sum: 39edb310103b24845e4d92901afe7d2f
+SHA1: ae4b412ffa07eec966b4b10954be0a229ab0ec98
+SHA256: c06a1961bb5d323c04e5a6e97122839889dfba68578dde99cfb6560239ca76d5
+Section: Tweaks
+Description: remove SB folder blur and SB icon mask blur.
+Author: T.Herak
+Name: vobec
+
