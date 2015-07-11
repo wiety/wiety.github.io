@@ -1,0 +1,8 @@
+Origin: wietys Public repository
+Label: wiety Public repo
+Suite: stable
+Version: 1.0
+Codename: ios
+Architecture: iphoneos-arm
+Components: main
+Description: wietys Public Repo
