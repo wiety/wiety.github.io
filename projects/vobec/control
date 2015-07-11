@@ -1,0 +1,9 @@
+Package: com.vsz.vobec
+Name: vobec
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: remove SB folder blur and SB icon mask blur.
+Maintainer: T.Herak
+Author: T.Herak
+Section: Tweaks
