@@ -16,6 +16,7 @@
 #                :v. 0.8  : minor code corrections, mainly related to the output and command prompts during the script runtime                              #
 #                :v. 0.9  : bundled into deb package for installing through repo                                                                            #
 #                :v. 0.9.1: added better deb packaging related to control file as well as included the architecture in output                               #
+#                :v. 0.9.2: code cleansing, added new functions, better output formatting 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 # Functions
