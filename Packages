@@ -12,6 +12,6 @@ Section: Utilities
 Priority: extra
 Description: Repackage any of your tweaks locally, without the need to download it from Cydia again. This is super usefull when there is an update of your until now perfectly working tweak in Cydia and you want to make a backup of the version installed. Normally you wouldn't be able to backup anything because it is possible to fetch only the most current version of your tweak and so you would be lost. Not anymore :)))
 Author: T.Herak <50dc856b@opayq.com>
-Depiction: https://wiety.github.io/Depictions/?p=com.vsz.redeb
+Depiction: https://wiety.github.io/depictions/?p=com.vsz.redeb
 Name: redeb
 
