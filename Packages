@@ -1,13 +1,13 @@
 Package: com.vsz.redeb
-Version: 0.9.6
+Version: 0.9.7
 Architecture: iphoneos-arm
 Maintainer: T.Herak <50dc856b@opayq.com>
 Depends: bash (>= 4.0.17-13), coreutils (>= 8.12-12p), grep (>= 2.5.4-3), sed (>= 4.1.5-7), gawk (>= 3.1.6-2p), apt7 (>= 0.7.25.3-6)
-Filename: ./debs//com.vsz.redeb_0.9.6_iphoneos-arm.deb
+Filename: ./debs//com.vsz.redeb_0.9.7_iphoneos-arm.deb
 Size: 3998
-MD5sum: 442fc754234dfa47a791dadbd2035f18
-SHA1: 78496672c5adf5fe149dccbb3b0ba8c6ef8af8bf
-SHA256: e7fd5c7db3b62cfff5dd3ceff8218dc0fc38340341c2ff4bfb4bc05e9f5fec44
+MD5sum: 66107d83d5b8541772d873f0799ffad7
+SHA1: bf8847f24f60346b610c182996c03519762e1a96
+SHA256: a177c2a2f45d4184efd1ac72ccbdfa591e2f51ce9cac221f5940ee8cea82441f
 Section: Utilities
 Priority: extra
 Description: Repackage any of your tweaks locally, without the need to download it from Cydia again. This is super usefull when there is an update of your until now perfectly working tweak in Cydia and you want to make a backup of the version installed. Normally you wouldn't be able to backup anything because it is possible to fetch only the most current version of your tweak and so you would be lost. Not anymore :)))
