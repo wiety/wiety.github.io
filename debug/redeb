@@ -48,30 +48,29 @@ function usage()
 
               echo -e "Please type in the line number of the package ID you would like to redeb followed by Return key : \c"
               read packageNum
-              case "${packageNum#[-+]}" in  # this will include also negative numbers
-                ''|*[!0-9]*)
-
-                    echo -e "You didn't put a$bldred valid number!$txtrst Please start over with \"redeb\"" >&2
+              case "$packageNum" in  # this will include also negative numbers
+                    ''|*[!0-9]*)
+                    echo -e "You didn't put a $bldred valid number!$txtrst Please start over with \"redeb\""
                     exit 1
                     ;; #ending of the not a number case
 
-                  *)
-                    packageID=`j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $j:$i;j=$[j+1];done | grep -e "$packageNum" | head -1 |awk -F ":" '{print $2}'`
-                    #read packageID
-                    BUNDLEID="$packageID"
-                    echo -e "You have selected : $bldpur$packageID$txtrst"
-                ;; #ending of the valid inserted number case
+                      *)
+                        packageID=`j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $j:$i;j=$[j+1];done | grep -e "$packageNum" | head -1 |awk -F ":" '{print $2}'`
+                        #read packageID
+                        BUNDLEID="$packageID"
+                        echo -e "You have selected : $bldpur$packageID$txtrst"
+                        ;; #ending of the valid inserted number case
                esac
             ;; #endind of the y|Y case
 
           n|N)
-              echo -e "$bldredYou haven't choosen me to list the packages for you. If so, list it yourself and start again with redeb <package bundle ID>$txtrst"
+              echo -e ""$bldred"You haven't choosen me to list the packages for you. If so, list it yourself and start again with redeb <package bundle ID> \n  $txtrst"
               exit 1 #ending of the n|N case
               ;;
 
-            *) echo "$bldredYou didn't insert any package id, please rerun the script with ./redeb.sh <package bundle id> or you might list the bundle IDs with this script$txtrst"
+            *) echo -e ""$bldred"You didn't insert any package id, please rerun the script with ./redeb.sh <package bundle id> or you might list the bundle IDs with this script$txtrst"
                exit 1
-            ;; #ending of the all the other case than n|N, y|Y
+               ;; #ending of the n|N case - 2
         esac
 }
 
@@ -206,6 +205,6 @@ if [[ -f "$DebsFolder"/"$DEB" && -d "$ROOTDIR" ]];then
 #  mv $DEB $DebsFolder/$DEB
   rm -r $ROOTDIR
 fi
-echo "Done!"
+prtok
 echo "Your new repackaged DEB file is located at $DebsFolder/$DEB"
 #######!! TODO !! As the last step, there is a comparision between the "redebed" package and the contents of the actually installed one
