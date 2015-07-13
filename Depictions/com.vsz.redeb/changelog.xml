@@ -1,0 +1,12 @@
+<changelog>
+	<changes>
+		<version>0.9.3</version>
+		<change>now if you dont want to put in package bundle id directly</change>
+		<change>redeb will list it in numeral order and you will select only the number</change>
+		<change>It has feature 2</change>
+	</changes>
+	<changes>
+		<version>0.5</version>
+		<change>Initial Release</change>
+	</changes>
+</changelog>
