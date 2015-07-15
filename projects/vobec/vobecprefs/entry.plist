@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = vobecprefs;
+	cell = PSLinkCell;
+	detail = vobecprefsListController;
+	icon = vobecprefs.png;
+	isController = 1;
+	label = Vobec;
+    };
+}
