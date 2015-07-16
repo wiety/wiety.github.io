@@ -14,3 +14,20 @@ Description: Repackage any of your tweaks locally, without the need to download 
 Author: T.Herak <50dc856b@opayq.com>
 Name: redeb
 Depiction: https://wiety.github.io/cydia/depictions/?p=com.vsz.redeb
+
+Package: com.vsz.vobec
+Version: 0.0.1-22
+Architecture: iphoneos-arm
+Maintainer: T.Herak
+Installed-Size: 192
+Depends: mobilesubstrate
+Filename: ./debs//com.vsz.vobec_0.0.1-22_iphoneos-arm.deb
+Size: 82012
+MD5sum: 36f039a83a911cc7fd4ed3a577b58041
+SHA1: 3c17150dd3cb69621b80d529846fd511e63fb9dc
+SHA256: 2ae7ada3e5bfba372af0b7359dc0b026fff52049735ad5132c790b9fff8904b3
+Section: Tweaks
+Description: remove SB folder blur and SB icon mask blur.
+Author: T.Herak
+Name: vobec
+Depiction: https://wiety.github.io/cydia/depictions/?p=com.vsz.vobec

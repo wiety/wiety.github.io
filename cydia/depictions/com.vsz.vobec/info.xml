@@ -1,0 +1,24 @@
+<package>
+	<id>com.vsz.vobec</id>
+	<name>vobec</name>
+	<version>0.0.1-22/version>
+	<compatibility>
+		<firmware>
+			<miniOS>3.0</miniOS>
+			<maxiOS>8.4</maxiOS>
+			<otherVersions>unsupported</otherVersions>
+			<!--
+			for otherVersions, you can put either unsupported or unconfirmed
+			-->
+		</firmware>
+	</compatibility>
+	<dependencies>mobilesubstrate</dependencies>
+	<descriptionlist>
+		<description>remove SB folder blur and SB icon mask blur.</description>
+	</descriptionlist>
+	<screenshots></screenshots>
+	<changelog>
+		<change>Initial release</change>
+	</changelog>
+	<links></links>
+</package>
