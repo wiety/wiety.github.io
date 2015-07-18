@@ -21,6 +21,8 @@
 #                           number.                                                                                                                         #
 #                :v. 0.9.4: made a colored output so it will be easier to notice all the information which comes from it. Finetuned the logic of the        #
 #                           main function, so now it realizes if the input is in correct format, which will (hopefully) prevent some final deb corruption   #
+#                :v. 0.9.5: test of new repo layout                                                                                                         #
+#                :v. 0.9.6: reverted back to previous layout :))                                                                                            #
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 # Text color variables
