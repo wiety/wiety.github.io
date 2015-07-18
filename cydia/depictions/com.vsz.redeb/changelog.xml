@@ -1,5 +1,9 @@
 <changelog>
 	<changes>
+                <version>0.9.9</version>
+                <change>made again some layout and usage corrections</change>
+        </changes>
+	<changes>
 		<version>0.9.8</version>
 		<change>made some layout and usage corrections</change>
 	</changes>

@@ -1,16 +1,16 @@
-Package: com.vsz.vobec
-Version: 0.0.1-22
+Package: com.vsz.redeb
+Version: 0.9.9
 Architecture: iphoneos-arm
-Maintainer: T.Herak
-Installed-Size: 192
-Depends: mobilesubstrate
-Filename: ./debs//com.vsz.vobec_0.0.1-22_iphoneos-arm.deb
-Size: 82012
-MD5sum: 36f039a83a911cc7fd4ed3a577b58041
-SHA1: 3c17150dd3cb69621b80d529846fd511e63fb9dc
-SHA256: 2ae7ada3e5bfba372af0b7359dc0b026fff52049735ad5132c790b9fff8904b3
-Section: Tweaks
-Description: remove SB folder blur and SB icon mask blur.
-Author: T.Herak
-Name: vobec
+Maintainer: T.Herak <50dc856b@opayq.com>
+Depends: bash (>= 4.0.17-13), coreutils (>= 8.12-12p), grep (>= 2.5.4-3), sed (>= 4.1.5-7), gawk (>= 3.1.6-2p), apt7 (>= 0.7.25.3-6)
+Filename: ./debs//com.vsz.redeb_0.9.9_iphoneos-arm.deb
+Size: 4048
+MD5sum: 9ac153234d86c76bc5facbfe6e91dc20
+SHA1: 22f125648c625235e3f65435e83ee0d23c3d8b1e
+SHA256: bc5319060d96a7d028258e989892bb11d8c4fdeb39a3be4dac3428966c21af5e
+Section: Utilities
+Priority: extra
+Description: Repackage any of your tweaks locally, without the need to download it from Cydia again. This is super usefull when there is an update of your until now perfectly working tweak in Cydia and you want to make a backup of the version installed. Normally you wouldn't be able to backup anything because it is possible to fetch only the most current version of your tweak and so you would be lost. Not anymore :)))
+Author: T.Herak <50dc856b@opayq.com>
+Name: redeb
 

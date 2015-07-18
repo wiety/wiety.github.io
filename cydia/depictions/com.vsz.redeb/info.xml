@@ -1,7 +1,7 @@
 <package>
 	<id>com.vsz.redeb</id>
 	<name>redeb</name>
-	<version>0.9.8</version>
+	<version>0.9.9</version>
 	<compatibility>
 		<firmware>
 			<miniOS>3.0</miniOS>
@@ -18,7 +18,7 @@
 	</descriptionlist>
 	<screenshots></screenshots>
 	<changelog>
-		<change>made some layout and usage corrections</change>
+		<change>made again some layout and usage corrections</change>
 	</changelog>
 	<links></links>
 </package>
