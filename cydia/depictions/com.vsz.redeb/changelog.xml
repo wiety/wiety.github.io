@@ -1,6 +1,10 @@
 <changelog>
 	<changes>
+		<version>0.9.8</version>
+		<change>made some layout and usage corrections</change>
+	</changes>
+	<changes>
 		<version>0.9.7</version>
-		<change>new repo layout test</change>
+		<change>Initial Release</change>
 	</changes>
 </changelog>

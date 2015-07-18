@@ -23,6 +23,8 @@
 #                           main function, so now it realizes if the input is in correct format, which will (hopefully) prevent some final deb corruption   #
 #                :v. 0.9.5: test of new repo layout                                                                                                         #
 #                :v. 0.9.6: reverted back to previous layout :))                                                                                            #
+#                :v. 0.9.7: again, new repo layout                                                                                                          #
+#                :v. 0.9.8: made some colorized changes, when listing tweaks,etc ...                                                                        #
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 # Text color variables
@@ -46,7 +48,7 @@ function usage()
       read listPackages
         case "$listPackages" in
           y|Y)
-              j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $j:$i;j=$[j+1];done
+              j=0;for i in $(dpkg --get-selections | awk '{print $1}');$bldblu$j:$txtrst$i;j=$[j+1];done
 
               echo -e "Please type in the line number of the package ID you would like to redeb followed by Return key : \c"
               read packageNum
