@@ -1,8 +1,6 @@
 .DS_Store
 *.o
 .theos/*
-debs/*
-*.deb
 *.dylib
 **/.theos/*
 */.theos/*
