@@ -1,7 +1,7 @@
 <package>
 	<id>com.vsz.redeb</id>
 	<name>redeb</name>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<compatibility>
 		<firmware>
 			<miniOS>3.0</miniOS>
@@ -18,7 +18,7 @@
 	</descriptionlist>
 	<screenshots></screenshots>
 	<changelog>
-		<change>fixed a bug in the FS checking</change>
+		<change>Safer input logic. Created various checks of the input before the repackaging is even started.</change>
 	</changelog>
 	<links></links>
 </package>

@@ -1,5 +1,9 @@
 <changelog>
 	<changes>
+	<version>1.0.1</version>
+	<change>Safer input logic. Created various checks of the input before the repackaging is even started.</change>
+</changes>
+	<changes>
 	<version>1.0.0</version>
 	<change>Fixed a bug with the FS checking</change>
 </changes>

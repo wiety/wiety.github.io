@@ -45,27 +45,34 @@ ques=${bldblu}?${txtrst}
 # Functions
 function usage()
 {
-      echo -e  "You didn't insert any$bldred package ID,$txtrst do you want me to list all your available packages (y/n)? : \c"
+      echo -e  "You didn't insert any$bldred valid package ID or the inserted one is not correct,$txtrst do you want me to list all the  available package bundle ID's (y/n)? : \c"
       read listPackages
         case "$listPackages" in
           y|Y)
-              j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $bldblu$j:$txtrst$i;j=$[j+1];done
-
-              echo -e "Please type in the line number of the package ID you would like to redeb followed by Return key : \c"
+              endnumber=`j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $j:$i;j=$[j+1];done|tail -1|awk -F ":" '{print $1}'`
+	      j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $bldblu$j:$txtrst$i;j=$[j+1];done
+              echo -e "Please type in the line number of the package ID between 0 and "$endnumber" followed by Return key : \c"
               read packageNum
-              case "$packageNum" in  # this will include also negative numbers
+
+	           case "$packageNum" in  # this will include also negative numbers
                     ''|*[!0-9]*)
-                    echo -e "You didn't put a $bldred valid number!$txtrst Please start over with \"redeb\""
-                    exit 1
-                    ;; #ending of the not a number case
+                        echo -e "You didn't put a $bldred valid number!$txtrst Please start over with \"redeb\""
+                        exit 1
+                        ;; #ending of the not a number case
 
                       *)
-                        packageID=`j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $j:$i;j=$[j+1];done | grep -e "$packageNum" | head -1 |awk -F ":" '{print $2}'`
-                        #read packageID
-                        BUNDLEID="$packageID"
-                        echo -e "You have selected : $bldpur$packageID$txtrst"
+                        endnumber=`j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $j:$i;j=$[j+1];done|tail -1|awk -F ":" '{print $1}'`
+                        if [[ "$packageNum" -gt "$endnumber" ]] ; then
+                          echo -e "You have selected an invalid number. It must be a number between 0 and $endnumber !"
+                          exit 1
+                        else
+                          packageID=`j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $j:$i;j=$[j+1];done | grep -e "$packageNum" | head -1 |awk -F ":" '{print $2}'`
+                          #read packageID
+                          BUNDLEID="$packageID"
+                          echo -e "You have selected : $bldpur$packageID$txtrst"
+                        fi
                         ;; #ending of the valid inserted number case
-               esac
+              esac
             ;; #endind of the y|Y case
 
           n|N)
@@ -84,6 +91,7 @@ function prtok()
       echo -e "$bldpur"Done! " $txtrst \n"
 }
 
+
 #Let's see if the Redeb folder exists in /var/mobile/Documents and it will be created when needed
 export REDEB="/private/var/mobile/Documents/Redeb"
 
@@ -101,7 +109,10 @@ exec > >(tee /private/var/mobile/Documents/Redeb/redeb.log)
 exec 2>/private/var/mobile/Documents/Redeb/redeb.err
 
 #check syntax and possibly list bundle IDs if requested
+badName=`dpkg --get-selections | grep -i $1`
 if [ "$1" = "" ]; then
+  usage
+elif [ -z "$badName" ]; then
   usage
 else
   BUNDLEID="$1"
@@ -200,4 +211,3 @@ if [[ -f "$DebsFolder"/"$DEB" && -d "$ROOTDIR" ]];then
 fi
 prtok
 echo "Your new repackaged DEB file is located at $DebsFolder/$DEB"
-#######!! TODO !! As the last step, there is a comparision between the "redebed" package and the contents of the actually installed one
