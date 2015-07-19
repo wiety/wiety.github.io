@@ -25,6 +25,7 @@
 #                :v. 0.9.6: reverted back to previous layout :))                                                                                            #
 #                :v. 0.9.7: again, new repo layout                                                                                                          #
 #                :v. 0.9.8: made some colorized changes, when listing tweaks,etc ...                                                                        #
+#                :v. 1.0.0: fixed a stupid bug with checking of the directories and files which are needed for the whole process                            #
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 # Text color variables
@@ -84,6 +85,16 @@ function prtok()
 }
 
 #Let's see if the Redeb folder exists in /var/mobile/Documents and it will be created when needed
+export REDEB="/private/var/mobile/Documents/Redeb"
+
+if [ -d "$REDEB" ];
+  then
+    echo "$REDEB exists, continuing ..."
+else
+    echo "$REDEB directory is not existing! Creating it just right now..."
+    mkdir -p $REDEB
+    prtok
+fi
 
 #logging
 exec > >(tee /private/var/mobile/Documents/Redeb/redeb.log)
@@ -102,28 +113,6 @@ ARCHITECTURE=`dpkg-query -s "$BUNDLEID" | grep Architecture | awk '{print $2}'`
 DEB="$BUNDLEID"_"$VERSION"_"$ARCHITECTURE".deb
 export ROOTDIR="/private/var/mobile/Documents/Redeb/packages/$BUNDLEID"
 export DebsFolder="/private/var/mobile/Documents/Redeb/debs"
-export REDEB="/private/var/mobile/Documents/Redeb"
-
-#Let's see if the Redeb folder exists in /var/mobile/Documents and it will be created when needed
-if [ -d "$REDEB" ];
-  then
-    echo "$REDEB exists, continuing ..."
-else
-    mkdir -p $REDEB
-    prtok
-fi
-
-#echo $ROOTDIR
-
-#check input of syntax and how the script has been started
-#if [ "$1" = "" ];then
-       #echo "You didn't insert any package id, please rerun the script with ./redeb.sh <package bundle id>"
-#       usage
-       #exit 0
-#   else
-#       echo "Procesing package $1 and its belongings..."
-#fi
-#sleep 1
 
 #check for the debs dir, where the deb file will be moved after it is created
 if [ -d "$DebsFolder" ]; then
