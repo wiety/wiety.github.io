@@ -1,6 +1,10 @@
 <changelog>
-	<changes>
-		<version>0.0.1-22</version>
-		<change>initial release</change>
-	</changes>
+   <changes>
+        <version>0.0.1-24</version>
+        <change>now with better respring option logic where the SB is "respringed" in the proper way</change>
+    </changes>    
+    <changes>
+        <version>0.0.1-22</version>
+        <change>initial release</change>
+    </changes>
 </changelog>

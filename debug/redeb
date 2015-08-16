@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------#
 #title           :redeb                                                                                                                                  #
 #description     :This script attempts to backup your tweaks, packages,....,everything what has a debian structure and what is not offered by cydia.        #
@@ -27,6 +26,7 @@
 #                :v. 0.9.7: again, new repo layout                                                                                                          #
 #                :v. 0.9.8: made some colorized changes, when listing tweaks,etc ...                                                                        #
 #                :v. 1.0.0: fixed a stupid bug with checking of the directories and files which are needed for the whole process                            #
+#                :v. 1.0.1: better input logic, now if you put a number higher that the number of tweaks, the script wont continue.
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 # Text color variables

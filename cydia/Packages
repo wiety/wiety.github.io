@@ -16,16 +16,16 @@ Depiction: https://wiety.github.io/cydia/depictions/?p=com.vsz.redeb
 Name: redeb
 
 Package: com.vsz.vobec
-Version: 0.0.1-22
+Version: 0.0.1-24
 Architecture: iphoneos-arm
 Maintainer: T.Herak
 Installed-Size: 192
 Depends: mobilesubstrate
-Filename: ./debs//com.vsz.vobec_0.0.1-22_iphoneos-arm.deb
-Size: 11118
-MD5sum: acb3325b137099763e2f9eefd0db4e8e
-SHA1: 1ddace7a7d93992744d0ffecfb13ec02acd01761
-SHA256: 6d5f9f1d3b24624ad1b20a8dd08b18c94702248e8d3e01a5a0ea2d68ce7f1611
+Filename: ./debs//com.vsz.vobec_0.0.1-24_iphoneos-arm.deb
+Size: 11748
+MD5sum: 7d39228346df475e64628b2737bb0192
+SHA1: 128f72f8d63e256c187bbcc09a6ffd9928e21b0f
+SHA256: ef2ab6e13c2c76f8a6bd6f09d476e001c071143875885f4972c865b45dc91c72
 Section: Tweaks
 Description: remove SB folder blur and SB icon mask blur.
 Author: T.Herak

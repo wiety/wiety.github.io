@@ -1,0 +1,5 @@
+#Vylistujem package a ich section
+
+for i in `dpkg --get-selections|awk '{print $1}'`;do dpkg-query -s $i| grep Section;done
+
+awk ‘!x[$0]++’ `for i in `dpkg --get-selections|awk '{print $1}'`;do dpkg-query -s $i| grep Section;done`
