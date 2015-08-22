@@ -1,3 +1,21 @@
+Package: com.vsz.localssh
+Version: 1.0-1
+Architecture: iphoneos-arm
+Maintainer: T.Herak <50dc856b@opayq.com>
+Installed-Size: 80
+Depends: mobilesubstrate, openssh
+Filename: ./debs//com.vsz.localssh_1.0-1_iphoneos-arm.deb
+Size: 2908
+MD5sum: c2914af6bc8585390bb6a42a214b3d13
+SHA1: c7ca48864ed9d187b998dfbb23b9b11260d62af4
+SHA256: 2b2833f824c2f52920f93ea42bb006c09d0ff729091d9d1d3ac85b8437929f4a
+Section: Utilities
+Priority: extra
+Description: Enable ssh to localhost for appstore terminal clients such as Prompt 2 or Server Auditor.After installing a new ssh port 50022 will be activated, which should be used when using the Terminal client to log in. To connect through Prompt 2 or Server Auditor, enter the host address as 127.0.0.1 and port as 50022.
+Author: T.Herak <50dc856b@opayq.com>
+Depiction: https://wiety.github.io/cydia/depictions/?p=com.vsz.localssh
+Name: LocalSSH
+
 Package: com.vsz.redeb
 Version: 1.0.1
 Architecture: iphoneos-arm

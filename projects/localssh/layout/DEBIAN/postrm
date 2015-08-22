@@ -1,0 +1,10 @@
+#!/bin/sh
+
+launchctl unload /Library/LaunchDaemons/com.openssh.sshd_vsz.plist
+rm /Library/LaunchDaemons/com.openssh.sshd_vsz.plist
+
+if [ -s /tmp/Localssh/services_backup ]; then
+  cp /etc/services /tmp/Localssh/services_custom
+  cp /tmp/Localssh/services_backup /etc/services
+fi
+
