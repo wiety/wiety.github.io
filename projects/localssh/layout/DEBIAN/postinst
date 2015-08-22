@@ -1,11 +1,11 @@
 #!/bin/sh
-mkdir -p /tmp/Localssh
-if [ -d /tmp/Localssh ]; then
-    chmod 722 /tmp/Localssh
-    cp /etc/services /tmp/Localssh/services_backup
+mkdir -p /var/mobile/Documents/Localssh
+if [ -d /var/mobile/Documents/Localssh ]; then
+    chmod 722 /var/mobile/Documents/Localssh
+    cp /etc/services /var/mobile/Documents/Localssh/services_backup
 fi
 
-if [ -s /tmp/Localssh/services_backup ]; then
+if [ -s /var/mobile/Documents/Localssh/services_backup ]; then
 echo "ssh-vsz       50022/udp     # SSH Remote Login Protocol VSZ">>/etc/services
 echo "ssh-vsz       50022/tcp     # SSH Remote Login Protocol VSZ">>/etc/services
 fi
