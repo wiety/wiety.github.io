@@ -1,6 +1,10 @@
 <changelog>
+   <changes>
+        <version>1.0-2</version>
+        <change>removed the useless dylib which was there as a left-over from creating the package in theos</change>
+    </changes>
     <changes>
-        <version>1.0.1</version>
+        <version>1.0-1</version>
         <change>initial release</change>
     </changes>
 </changelog>
