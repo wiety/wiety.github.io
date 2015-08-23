@@ -26,7 +26,8 @@
 #                :v. 0.9.7: again, new repo layout                                                                                                          #
 #                :v. 0.9.8: made some colorized changes, when listing tweaks,etc ...                                                                        #
 #                :v. 1.0.0: fixed a stupid bug with checking of the directories and files which are needed for the whole process                            #
-#                :v. 1.0.1: better input logic, now if you put a number higher that the number of tweaks, the script wont continue.
+#                :v. 1.0.1: better input logic, now if you put a number higher that the number of tweaks, the script wont continue.                         #
+#                :v. 1.0.2: now packages listed will exclude the ones starting with gsc, which are useless for a normal user                                #
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 # Text color variables
@@ -50,24 +51,24 @@ function usage()
       read listPackages
         case "$listPackages" in
           y|Y)
-              endnumber=`j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $j:$i;j=$[j+1];done|tail -1|awk -F ":" '{print $1}'`
-	      j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $bldblu$j:$txtrst$i;j=$[j+1];done
+              endnumber=`j=0;for i in $(dpkg --get-selections | awk '{print $1}'| grep -v gsc);do echo $j:$i;j=$[j+1];done|tail -1|awk -F ":" '{print $1}'`
+        j=0;for i in $(dpkg --get-selections | awk '{print $1}'|grep -v gsc);do echo $bldblu$j:$txtrst$i;j=$[j+1];done
               echo -e "Please type in the line number of the package ID between 0 and "$endnumber" followed by Return key : \c"
               read packageNum
 
-	           case "$packageNum" in  # this will include also negative numbers
+             case "$packageNum" in  # this will include also negative numbers
                     ''|*[!0-9]*)
                         echo -e "You didn't put a $bldred valid number!$txtrst Please start over with \"redeb\""
                         exit 1
                         ;; #ending of the not a number case
 
                       *)
-                        endnumber=`j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $j:$i;j=$[j+1];done|tail -1|awk -F ":" '{print $1}'`
+                        endnumber=`j=0;for i in $(dpkg --get-selections | awk '{print $1}'|grep -v gsc);do echo $j:$i;j=$[j+1];done|tail -1|awk -F ":" '{print $1}'`
                         if [[ "$packageNum" -gt "$endnumber" ]] ; then
                           echo -e "You have selected an invalid number. It must be a number between 0 and $endnumber !"
                           exit 1
                         else
-                          packageID=`j=0;for i in $(dpkg --get-selections | awk '{print $1}');do echo $j:$i;j=$[j+1];done | grep -e "$packageNum" | head -1 |awk -F ":" '{print $2}'`
+                          packageID=`j=0;for i in $(dpkg --get-selections | awk '{print $1}'|grep -v gsc);do echo $j:$i;j=$[j+1];done | grep -e "$packageNum" | head -1 |awk -F ":" '{print $2}'`
                           #read packageID
                           BUNDLEID="$packageID"
                           echo -e "You have selected : $bldpur$packageID$txtrst"

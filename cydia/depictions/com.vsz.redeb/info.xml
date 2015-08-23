@@ -18,7 +18,7 @@
 	</descriptionlist>
 	<screenshots></screenshots>
 	<changelog>
-		<change>Safer input logic. Created various checks of the input before the repackaging is even started.</change>
+		<change>packages which started with gsc and were useless to see for a normal user were now removed.</change>
 	</changelog>
 	<links></links>
 </package>
