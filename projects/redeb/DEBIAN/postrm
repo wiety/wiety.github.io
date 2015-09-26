@@ -1,8 +1,0 @@
-#!/bin/bash
-
-export REDEB="/private/var/mobile/Documents/Redeb"
-
-if [ -d "$REDEB" ];
-  then
-rm -r $REDEB
-fi
