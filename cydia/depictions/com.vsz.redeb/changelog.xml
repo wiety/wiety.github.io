@@ -1,7 +1,8 @@
 <changelog>
 <changes>
 	<version>1.0.3</version>
-	<change>!!! IMPORTANT NOTE !!! BEFORE INSTALLING THIS UPDATE PLEASE BACKUP YOUR /var/mobile/Redeb/debs FOLDER. THIS MUST BE DONE BECAUSE OF THE POSTRM METHOD WHICH UNFORTUNATELLY CAN NOT BE BYPASSED, BUT IS REMOVED IN THIS VERSION OF REDEB. SORRY FOR THAT !
+	<change>!!! IMPORTANT NOTE !!! BEFORE INSTALLING THIS UPDATE PLEASE BACKUP YOUR /var/mobile/Redeb/debs FOLDER. THIS MUST BE DONE BECAUSE OF THE POSTRM METHOD WHICH UNFORTUNATELLY CAN NOT BE BYPASSED, BUT IS REMOVED IN THIS VERSION OF REDEB. SORRY FOR THAT !.
+		
 
 	- Fixed the method which builds the package structure, to be able to handle directories in path as well as filenames which contain space / zero character. e.g. "/Library/Application Support" or "/Library/Themes/ayecon Home Screen.theme",etc ...</change>
 </changes>
