@@ -7,3 +7,7 @@
 _/*
 */obj/*
 **/obj/*
+debug
+remove.*
+update_*.*
+push.sh

@@ -1,1 +1,6 @@
 .DS_store
+push.sh
+remove.sh
+update.sh
+packages.sh
+

@@ -16,15 +16,15 @@ Depiction: https://wiety.github.io/cydia/depictions/?p=com.vsz.localssh
 Name: LocalSSH
 
 Package: com.vsz.redeb
-Version: 1.0.2
+Version: 1.0.3
 Architecture: iphoneos-arm
 Maintainer: T.Herak <50dc856b@opayq.com>
 Depends: bash (>= 4.0.17-13), coreutils (>= 8.12-12p), grep (>= 2.5.4-3), sed (>= 4.1.5-7), gawk (>= 3.1.6-2p), apt7 (>= 0.7.25.3-6)
-Filename: ./debs//com.vsz.redeb_1.0.2_iphoneos-arm.deb
-Size: 4340
-MD5sum: c617d3310d724024a081fc0b163daf03
-SHA1: 62ff4b9cc7b3fa6468c3e73001f888731cc668b4
-SHA256: 3035b4d53fe9049242f323606b58191cc75cf7e7393e399af3a5212f93ee1dae
+Filename: ./debs//com.vsz.redeb_1.0.3_iphoneos-arm.deb
+Size: 3686
+MD5sum: d95d597ed0f240312c00bfc6b7033d21
+SHA1: 689ecdf71e616e7f1b3dd4893aec026282c7fbd3
+SHA256: b32808f6083708e1a4e51020cb880328d13705720c479d8189a8e882d5f8506f
 Section: Utilities
 Priority: extra
 Description: Repackage any of your tweaks locally, without the need to download it from Cydia again. This is super usefull when there is an update of your until now perfectly working tweak in Cydia and you want to make a backup of the version installed. Normally you wouldn't be able to backup anything because it is possible to fetch only the most current version of your tweak and so you would be lost. Not anymore :)))

@@ -1,5 +1,9 @@
 <changelog>
 <changes>
+	<version>1.0.3</version>
+	<change>Fixed the method which builds the package structure, to be able to handle directories in path as well as filenames which contain space / zero character. e.g. "/Library/Application Support" or "/Library/Themes/ayecon Home Screen.theme",etc ...</change>
+</changes>
+<changes>
 	<version>1.0.2</version>
 	<change>packages which started with gsc and were useless to see for a normal user were now removed.</change>
 </changes>

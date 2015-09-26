@@ -1,7 +1,9 @@
 #!/bin/sh
-mkdir -p /var/mobile/Documents/Localssh
 if [ -d /var/mobile/Documents/Localssh ]; then
     chmod 722 /var/mobile/Documents/Localssh
+    cp /etc/services /var/mobile/Documents/Localssh/services_backup
+else
+    mkdir -p /var/mobile/Documents/Localssh
     cp /etc/services /var/mobile/Documents/Localssh/services_backup
 fi
 
@@ -13,23 +15,18 @@ cat << "EOF" > /Library/LaunchDaemons/com.openssh.sshd_vsz.plist
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-
 <dict>
     <key>Label</key>
     <string>com.openssh.sshd_vsz</string>
-
     <key>Program</key>
     <string>/usr/libexec/sshd-keygen-wrapper</string>
-
     <key>ProgramArguments</key>
     <array>
         <string>/usr/sbin/sshd</string>
         <string>-i</string>
     </array>
-
     <key>SessionCreate</key>
     <true/>
-
     <key>Sockets</key>
     <dict>
         <key>Listeners</key>
@@ -38,10 +35,8 @@ cat << "EOF" > /Library/LaunchDaemons/com.openssh.sshd_vsz.plist
             <string>ssh-vsz</string>
         </dict>
     </dict>
-
     <key>StandardErrorPath</key>
     <string>/dev/null</string>
-
     <key>inetdCompatibility</key>
     <dict>
         <key>Wait</key>
