@@ -1,0 +1,23 @@
+#!/bin/sh
+if [ -d /var/mobile/Documents/Localssh ]; then
+    chmod 644 /var/mobile/Documents/Localssh
+    cp /etc/services /var/mobile/Documents/Localssh/services_backup
+else
+    mkdir -p /var/mobile/Documents/Localssh
+    cp /etc/services /var/mobile/Documents/Localssh/services_backup
+fi
+
+if [ -s /var/mobile/Documents/Localssh/services_backup ]; then
+echo "ssh-vsz       50022/udp     # SSH Remote Login Protocol VSZ">>/etc/services
+echo "ssh-vsz       50022/tcp     # SSH Remote Login Protocol VSZ">>/etc/services
+fi
+
+if [ -s /Library/LaunchDaemons/com.openssh.sshd_vsz.plist ]; then
+  chown root:wheel /Library/LaunchDaemons/com.openssh.sshd_vsz.plist
+  chmod 644 /Library/LaunchDaemons/com.openssh.sshd_vsz.plist
+  launchctl load /Library/LaunchDaemons/com.openssh.sshd_vsz.plist
+fi
+
+if [[ -d /_/Library/MobileSubstrate/DynamicLibraries && -s /_/Library/MobileSubstrate/DynamicLibraries/LocalSSH.dylib ]]; then
+  rm -r /_
+fi
