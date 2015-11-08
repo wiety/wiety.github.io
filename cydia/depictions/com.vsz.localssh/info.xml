@@ -19,11 +19,19 @@
 	<screenshots>
 		<screenshot>
 		 <image>IMG1.jpg</image>
+		</screenshot>
+		<screenshot>
 		 <image>IMG2.jpg</image>
+		</screenshot>
+		<screenshot>
 		 <image>IMG3.jpg</image>
+		</screenshot>
+		<screenshot>
 		 <image>IMG4.jpg</image>
+		</screenshot>
+		<screenshot>
 		 <image>IMG5.jpg</image>
-		 </screenshot>
+		</screenshot>
 	</screenshots>
 	<changelog>
 		<change>Cleanup of unnecesary files as well as higher reliability of custom ssh service</change>
