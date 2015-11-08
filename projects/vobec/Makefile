@@ -1,11 +1,15 @@
-THEOS_PACKAGE_DIR_NAME = debs
 ARCHS = armv7 arm64
-TARGET =: clang:7.1:8.1
+GO_EASY_ON_ME = 1
+TARGET = iphone:clang:latest:latest
+THEOS_BUILD_DIR = debs
+DEBUG=0
 
-include theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = vobec
 vobec_FILES = Tweak.xm
+vobec_CFLAGS = -fobjc-arc
+vobec_LDFLAGS += -Wl,-segalign,4000
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 

@@ -5,5 +5,10 @@
 			<url>https://twitter.com/tomasherak</url>
 			<iconclass>glyphicon glyphicon-user</iconclass>
 		</link>
+		<link>
+			<name>Credit for template</name>
+			<url>https://github.com/supermamon/Reposi3</url>
+			<iconclass>glyphicon glyphicon-user</iconclass>
+		</link>
 	</footerlinks>
 </repo>

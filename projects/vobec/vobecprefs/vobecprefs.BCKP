@@ -1,0 +1,40 @@
+#import <Preferences/PSListController.h>
+
+@interface vobecprefsListController: PSListController {
+}
+@end
+
+
+
+@implementation vobecprefsListController
+
+- (NSArray *)specifiers {
+	if (!_specifiers) {
+		_specifiers = [[self loadSpecifiersFromPlistName:@"vobecprefs" target:self] retain];
+	}
+
+	return _specifiers;
+}
+
+
+
+
+
+
+//- (id)specifiers {
+//	if(_specifiers == nil) {
+//		_specifiers = [[self loadSpecifiersFromPlistName:@"vobecprefs" target:self] retain];
+//	}
+//	return _specifiers;
+//
+//}
+
+-(void)Respring {
+system("killall -9 backboardd");     
+ }
+
+
+
+@end
+
+// vim:ft=objc

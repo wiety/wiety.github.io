@@ -1,9 +1,11 @@
 #!/bin/sh
+if [ -s /Library/LaunchDaemons/com.openssh.sshd_vsz.plist ]; then
+  launchctl unload /Library/LaunchDaemons/com.openssh.sshd_vsz.plist
+  rm /Library/LaunchDaemons/com.openssh.sshd_vsz.plist
+fi
 
-launchctl unload /Library/LaunchDaemons/com.openssh.sshd_vsz.plist
 
 if [ -s /var/mobile/Documents/Localssh/services_backup ]; then
   cp /etc/services /var/mobile/Documents/Localssh/services_custom
   cp /var/mobile/Documents/Localssh/services_backup /etc/services
 fi
-

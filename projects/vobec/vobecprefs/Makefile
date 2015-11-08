@@ -1,13 +1,12 @@
-ARCHS = armv7 arm64
-TARGET := iphone:clang
 
-include theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = vobecprefs
-vobecprefs_FILES = vobecprefs.mm
+vobecprefs_FILES = vobecprefs.m
 vobecprefs_INSTALL_PATH = /Library/PreferenceBundles
 vobecprefs_FRAMEWORKS = UIKit
 vobecprefs_PRIVATE_FRAMEWORKS = Preferences
+DEBUG=0
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 
