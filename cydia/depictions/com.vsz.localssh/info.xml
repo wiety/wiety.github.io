@@ -12,13 +12,26 @@
 			-->
 		</firmware>
 	</compatibility>
-	<dependencies>mobilesubstrate, openssh</dependencies>
+	<dependencies>openssh</dependencies>
 	<descriptionlist>
 		<description>Enable ssh to localhost for appstore terminal clients such as Prompt 2 or Server Auditor.After installing a new ssh port 50022 will be activated, which should be used when using the Terminal client to log in. To connect through Prompt 2 or Server Auditor, enter the host address as 127.0.0.1 and port as 50022.</description>
 	</descriptionlist>
-	<screenshots></screenshots>
+	<screenshots>
+		<screenshot>
+		 <image>IMG1.PNG</image>
+		 <image>IMG2.PNG</image>
+		 <image>IMG3.PNG</image>
+		 <image>IMG4.PNG</image>
+		 <image>IMG5.PNG</image>
+	 </screenshot>
+	</screenshots>
 	<changelog>
 		<change>Cleanup of unnecesary files as well as higher reliability of custom ssh service</change>
 	</changelog>
-	<links></links>
+	<links>
+		<link>
+			<name>/r/jailbreak</name>
+			<url>https://www.reddit.com/r/jailbreak</url>
+		</link>
+	</links>
 </package>
